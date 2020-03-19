@@ -934,7 +934,7 @@ table {
     
     
 }
-@media (orientation: portrait) {
+@media screen and (orientation: portrait) {
 
     
         .dws-menu{
