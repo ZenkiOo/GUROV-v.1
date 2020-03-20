@@ -946,18 +946,22 @@ table {
          max-height: 0;
          transition: max-height 0.3s;
          width: 100%;
+         
         }
         .dws-menu > ul li{
             width: 100%;
+            height: 80px;
+            
         }
-        
-        /* .dws-menu li>ul li ul{
-         position: absolute;
-         right: auto;
-         top: auto;
-        } */
+        .dws-menu ul li a{
+            font-size: 26px;
+            padding-top: 26px;
+            
+        }
         .dws-menu label.toggleMenu{
          display: block;
+         font-size: 26px;
+
         }
         input.toggleMenu:checked + label.toggleMenu{
          background: #000;
@@ -969,33 +973,25 @@ table {
          max-height: 5000px;
          transition: max-height 2s ease-in;
         }
-        /* .dws-menu label.toggleSubmenu{
-         position: absolute;
-         top: 0;
-         right: 0;
-         width: 100%;
-         height: 100%;
-         cursor: pointer;
-         display: block;
-        } */
-        /* input.toggleSubmenu:checked ~ a{
-         background: #454547;
-         color: #fff;
-        } */
-        /* .dws-menu label.toggleSubmenu .fa:before{
-         content: "\f0d7";
-         color: #454547;
-        } */
-        /* .dws-menu label.toggleSubmenu .fa{
-         position: absolute;
-         top: 15px;
-         right: 30px;
-        } */
-        /* .dws-menu input.toggleSubmenu:checked ~ label.toggleSubmenu .fa::before{
-         content: "\f0d8";
-         color: #ffffff;
-        } */
        
+    .title_default {
+       font-size: 40px;
+    }  
+    .column_padd {
+        font-size: 25px;
+    }
+    .mp_list {
+        font-size: 25px;
+    }
+    .title_med {
+        font-size: 33px;
+    }
+    .main_services {
+        font-size: 25px;
+    }
+    .icons {
+        font-size: 17px;
+    }
     .container_phone {
         display: none;
 
