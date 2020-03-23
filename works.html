@@ -81,7 +81,6 @@
   </div>
 
   
-  
 <div class = "menu_container">
   <div>
     <div class = "container_left container_hidden">
@@ -213,20 +212,77 @@
 
 <div class = "cont_column">
     <div class="column">
-        <div class = "title_default">Заголовок</div>
+        <!-- <div class = "title_default">Заголовок</div>
         <p class = "title_med">Заголовок поменьше</p>
-        <p class = "column_padd">
+        <p class = "column_padd"> 
             <div class="mp_list">
             <ul>
                 <li></li>
                 <li></li>
                 <li></li>
             </ul>
-        </div>
-    
+        </div> -->
 
-    </div>
+              <!-- Images used to open the lightbox -->
+      <div class="photo_row">
+        <div class="photo_column">
+          <img src="img/tn_workimg1.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+        </div>
+        <div class="photo_column">
+          <img src="img/tn_workimg2.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+        </div>
+        <div class="photo_column">
+          <img src="img/tn_workimg3.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+        </div>
+      </div>
+
+      <!-- The Modal/Lightbox -->
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides">
+            <div class="numbertext">1 / 3</div>
+            <img src="img/workimg1.png" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 3</div>
+            <img src="img/workimg2.png" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 3</div>
+            <img src="img/workimg3.png" style="width:100%">
+          </div>
+
+
+          <!-- Next/previous controls -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <!-- Caption text -->
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <!-- Thumbnail image controls -->
+          <div class="photo_column">
+            <img class="demo" src="img/tn_workimg1.png" onclick="currentSlide(1)" alt="Nature">
+          </div>
+
+          <div class="photo_column">
+            <img class="demo" src="img/tn_workimg2.png" onclick="currentSlide(2)" alt="Snow">
+          </div>
+
+          <div class="photo_column">
+            <img class="demo" src="img/tn_workimg3.png" onclick="currentSlide(3)" alt="Mountains">
+          </div>
+        </div>
+      </div>
+  </div>
 </div>
+
 
 </div> <!-- wrapper -->
 
@@ -341,7 +397,49 @@
 </div><!-- footer_inner -->
 
 
+<script>
+    // Open the Modal
+    function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
 
+  // Close the Modal
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+
+</script>
 
 
  </body>
