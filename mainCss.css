@@ -1046,7 +1046,7 @@ table {
 }
 
 .photo_row > .photo_column {
-    padding: 0 8px;
+    padding: 0 2px;
     
   }
   
@@ -1058,7 +1058,7 @@ table {
   
   /* Create four equal columns that floats next to eachother */
   .photo_column img{
-    width: 260px;
+    width: 270px;
     height: 210px;
     object-fit: cover;
     
@@ -1461,8 +1461,8 @@ table {
 }
 .works_item {
     background-color: #CEA272;
-    width: 250px;
-    height: 350px;
+    width: 270px;
+    height: 300px;
     margin: 3px;
     
 }
