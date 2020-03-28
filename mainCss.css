@@ -443,16 +443,17 @@ color: #fff;
 .title_med {
 
     display: block;
-    padding: 5px 20px 0 20px;
+    padding: 5px 20px 10px 20px;
     font-weight: bold;
     font-size: larger;
 
-} */
+} 
  .mp_list ul li {
 
-    padding: 5px 20px 5px 30px;
+    list-style: disc;
+    margin-left: 40px;
     
-} */
+} 
 .main_services {
 
     display: flex;
